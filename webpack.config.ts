@@ -21,6 +21,14 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'index.web.ts'),
+          path.resolve(__dirname, 'node_modules/react-native'),
+          path.resolve(__dirname, 'node_modules/@react-native'),
+          path.resolve(__dirname, 'node_modules/@react-navigation'),
+          path.resolve(__dirname, 'node_modules/expo-dev-menu/vendored/react-native-safe-area-context/src'),
+        ],
         use: [
           {
             loader: 'babel-loader',
@@ -33,7 +41,7 @@ module.exports = {
             },
           },
           ,
-          { loader: 'ts-loader' },
+          { loader: 'ts-loader', options: { allowTsInNodeModules: true } },
         ],
       },
       {
@@ -49,6 +57,7 @@ module.exports = {
   resolve: {
     alias: {
       'react-native$': 'react-native-web',
+      'react-native-safe-area-context': 'expo-dev-menu/vendored/react-native-safe-area-context/src',
     },
     extensions: ['.ts', '.js', '.tsx', '.web.ts'],
   },
