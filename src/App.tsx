@@ -10,22 +10,16 @@ const Home = ({ navigation }: { navigation: any }) => (
     <Button
       title="press me"
       onPress={() => {
-        navigation.navigate('Details', {
-          itemId: 86,
-          otherParam: 'anything you want here',
-        });
+        navigation.navigate('Details');
       }}
     />
   </View>
 );
 
-const DetailScreen = ({ route, navigation }: { route: any; navigation: any }) => {
-  const { itemId, otherParam } = route.params;
+const DetailScreen = ({ navigation }: { navigation: any }) => {
   return (
     <View style={styles.box}>
       <Text style={styles.text}>Detail Screen</Text>
-      <Text>itemId: {JSON.stringify(itemId)}</Text>
-      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
       <Button
         title="press me details"
         onPress={() => {

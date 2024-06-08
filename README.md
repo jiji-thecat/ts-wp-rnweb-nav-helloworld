@@ -1,10 +1,10 @@
-# TypeScript + React Native for Web + webpack + github pages template
+# TypeScript + React Native for Web + React Navigation + webpack + github pages template
 
 ## Description
 
-[github pages sample](https://jiji-thecat.github.io/ts-webpack-rn-hello-world/)
+[github pages sample](https://jiji-thecat.github.io/ts-wp-rnweb-nav-helloworld/)
 
-This project is for easily creating TypeScript + React Native for Web + webpack env on your local. Also you can host your app on github pages.
+This project is for easily creating TypeScript + React Native for Web + React Navigation + webpack env on your local. Also you can host your app on github pages.
 
 ## How to Install and Run
 
